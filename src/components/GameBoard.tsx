@@ -4,7 +4,7 @@ import { socketService } from '../services/socket';
 import { Card } from './Card';
 import { Opponent } from './Opponent';
 import { ColorPicker } from './ColorPicker';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { clsx } from 'clsx';
 import { canPlayCard } from '../utils/rules'; // Ensure this exists
 
@@ -130,7 +130,7 @@ export const GameBoard = () => {
           <div className="flex -space-x-5 md:-space-x-12 hover:-space-x-2 transition-all duration-300 py-4 min-w-max mx-auto">
             <AnimatePresence>
               {me.hand?.map((card) => {
-                const isPlayable = canPlayCard(card, state, me);
+                const isPlayable = canPlayCard(card, state);
                 return (
                   <div key={card.id} className={"opacity-100"}>
                     <Card 
