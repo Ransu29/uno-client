@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Build Output (Vite builds to /dist)
+dist/
+build/
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+
+
+# Note: We DO commit .env.production if it only contains public URLs
+# But we usually ignore .env to keep secrets safe.
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Junk
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+
+# IDE Settings
+.vscode/
+.idea/
